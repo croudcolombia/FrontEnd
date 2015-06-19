@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/dashboard/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="This webpage helps empowering local business">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="http://getbootstrap.com/favicon.ico">-->
+
+    <title id="web_title">Por la gente, para la gente</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./HtmlTemplate_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <script type="text/javascript" src="Javascript/lang_titles_modifiers.js"></script>
+    <script type="text/javascript" src="Javascript/nav_side_bar_manager.js"></script>
+    <script type="text/javascript" src="Javascript/profile_manager.js"></script>
+    <script type="text/javascript" src="Javascript/JobManagers/JobPostingForm.js"></script>
+
+
+  </head>
+
+  <body onload="change_title_on_load(document)">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" onclick="return reload_image_home();">Por la gente, para la gente</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="">Configuracion</a></li>
+            <li><a onclick="return display_profile()">Perfil</a></li>
+            <li><a href="">Ayuda</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Busqueda Rapida...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-3 col-md-2 sidebar">
+
+          <ul class="nav nav-sidebar">
+            <li > <a  type="button"  href=""  id="button_1" onclick="return display_news(this);">Ver noticias <span id="num_messages" class="badge">4</span>  </a></li>
+              <li > <a  type="button"  href=""  id="button_11" onclick="return display_news_wells(this);">Ver noticias wells <span class="badge">4</span>   </a></li>
+            <li > <a  type="button"  href=""  id="button_2" onclick="return create_job_post(this);">Crear Anuncio</a></li>
+            <li> <a href=""  id="button_3" onclick="return nav_bar_section_B(this);">Mis Mensajes</a></li>
+            <li> <a href=""  id="button_4" onclick="return nav_bar_section_C(this);">Buscar insumos</a></li>
+          </ul>
+
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+
+            <a id="show_content_space"></a>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./HtmlTemplate_files/jquery.min.js"></script>
+    <script src="./HtmlTemplate_files/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="./HtmlTemplate_files/holder.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./HtmlTemplate_files/ie10-viewport-bug-workaround.js"></script>
+  
+
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs></defs><text x="0" y="10" style="font-weight:bold;font-size:10pt;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">200x200</text></svg></body></html>
