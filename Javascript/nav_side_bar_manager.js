@@ -27,22 +27,9 @@ function change_content(element,content,textorhtml){
 
 function display_news_wells(element){
 
-    var news='';
 
-    for(var i=0;i<4;i++){
-            news+='<div class="well">';
-                news+='<div class="row">';
-                    news+='<table>';
-                        news+='<tr>';
-                            news+='<td><span class="label label-danger">Type 1</span></td>';
-                            news+='<td><span class="label label-default">Type 2</span></td>';
-                            news+='<td><span class="label label-primary">Type 3</span></td>';
-                            news+='<td><span class="label label-success">Type 4</span></td>';
-                        news+='</tr>';
-                    news+='</table>';
-                news+='</div>';
-            news+='</div>';
-    }
+
+    var news=display_news_form();
 
     change_inner_content(news);
 

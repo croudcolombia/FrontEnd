@@ -3,6 +3,11 @@
  */
 
 
+
+function try_external(text){
+    alert(text);
+}
+
 function load_professsions(){
     var prof=new Object();
 
