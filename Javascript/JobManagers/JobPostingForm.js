@@ -17,17 +17,30 @@ function create_job_form_string(){
 
         form+='<div class="form-group">';
             form+='<label for="inputtitulo">Titulo</label>';
-            form+='<input  name="titulo" required="true"  type="text" class="form-control" placeholder="Titulo de tu trabajo" id="inputtitulo" >';
+
+            form+='<div class="input-group" >';
+                form+='<span class="input-group-addon"><i class="glyphicon glyphicon-screenshot"></i></span>';
+                form+='<input  name="titulo" required="true"  type="text" class="form-control" placeholder="Titulo de tu trabajo" id="inputtitulo" >';
+            form+='</div>';
+
         form+='</div>';
+
 
         form+='<div class="form-group">';
             form+='<label for="textInput">Descripcion</label>';
-            form+='<textarea name="text" required="true" type="text" class="form-control" id="textInput" placeholder="Cuentale al mundo el trabjo que quieres ofrecer!!"></textarea>';
+            form+='<div class="input-group" >';
+                form+='<span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>';
+                form+='<textarea name="text" required="true" type="text" class="form-control" id="textInput" placeholder="Cuentale al mundo el trabjo que quieres ofrecer!!"></textarea>';
+            form+='</div>';
+
         form+='</div>';
 
         form+='<div class="form-group">';
             form+='<label for="inputFechaven">Fecha vencimiento</label>';
-            form+='<input name="fechavenci"  type="date" class="form-control" id="inputFechaven" placeholder="Fecha vencimiento">';
+            form+='<div class="input-group" >';
+                form+='<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>';
+                form+='<input name="fechavenci"  type="date" class="form-control" id="inputFechaven" placeholder="Fecha vencimiento">';
+            form+='</div>';
         form+='</div>';
 
 
@@ -86,15 +99,10 @@ function on_submit(form){
     }
 
 
-
-
-
-
-/*
     for(var field in kvpairs){
         string+=kvpairs[field];
     }
-*/
+
 
     alert(string);
 }

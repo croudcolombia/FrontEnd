@@ -43,6 +43,15 @@ function get_related_news(){
         user:"alvarovelezu@gmail.com"
     });
 
+    news.push( {
+        title:"Title news 5",
+        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.",
+        tags:["handyman","fix","house","pipe"],
+        date:"08/24/2015",
+        payments: [2,1],
+        user:"alvarovelezu@gmail.com"
+    });
+
     return news;
 }
 
@@ -81,6 +90,7 @@ function display_news_form(){
                     newsstr+='<p/>';
 
                     newsstr+='<table> <tr>';
+
                     for(var tag in news[neu].tags){
                         newsstr+='<td><span class="label label-primary">'+news[neu].tags[tag]+' </span></td>';
                     }
@@ -92,6 +102,7 @@ function display_news_form(){
             newsstr+='<label for="inputtitulo">Formas de pago</label>';
             newsstr+='<p/>';
                 newsstr+='<table> <tr>';
+
                     for(var pay in news[neu].payments){
 
                         if(news[neu].payments[pay]==1) {
