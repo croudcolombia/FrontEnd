@@ -4,4 +4,16 @@
 
 
 
+function get_all_messages(){
+    swal("Displaying messages");
 
+    return false;
+}
+
+
+function send_message(form){
+
+    console.log("Sending message");
+
+
+}

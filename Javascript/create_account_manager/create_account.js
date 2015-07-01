@@ -31,8 +31,8 @@ function remove_category(){
 
 function add_category(){
 
-    var categories=document.getElementById("categoriesadd");
 
+    var categories=document.getElementById("categoriesadd");
 
     if(categories.selectedIndex >= 0) {
 

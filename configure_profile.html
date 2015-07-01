@@ -12,6 +12,7 @@
     <title id="web_title">Por la gente, para la gente</title>
 
 
+
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -52,71 +53,72 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
 
 
-                <div class="well">
+            <div class="well">
 
 
-                    <form onsubmit="on_submit_new_account(this)">
+                <form onsubmit="on_submit_new_account(this)">
 
+                    <div>
+                        <img height="140" width="140" src="http://www.anfocal.ie/wp-content/uploads/2013/02/1A-Main-photo-facebook-blank-face-blank-570x427.jpeg" alt="140x140" class="img-thumbnail">
+                    </div>
 
-                        <div class="form-group">
-                            <label class="control-label" for="nombre">Nombre</label>
-                            <div class="input-group" >
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input type="text" name="nombre" required="true" class="form-control" id="nombre" placeholder="Cuentanos tu nombre">
-
-                            </div>
+                    <div class="form-group">
+                        <label class="control-label" for="nombre">Nombre</label>
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" name="nombre" required="true" class="form-control" id="nombre" placeholder="Cuentanos tu nombre">
                         </div>
+                    </div>
 
-
-                        <div class="form-group">
-                            <label class="control-label" for="email">Email</label>
-                            <div class="input-group" >
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input type="email" name="email" required="true" class="form-control" id="email" placeholder="Un correo electronico al que te puedan contactar">
-                                <span class="input-group-addon" onmousedown="show_help('email')"> ? </span>
-                            </div>
+                    <div class="form-group">
+                        <label class="control-label" for="email">Email</label>
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input type="email" name="email" required="true" class="form-control" id="email" placeholder="Un correo electronico al que te puedan contactar">
+                            <span class="input-group-addon" onmousedown="show_help('email')"> ? </span>
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label class="control-label" for="tel">Telefono Celular</label>
-                            <div class="input-group" >
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                                <input type="tel" name="telcel" required="true" class="form-control" id="tel" placeholder="Un numero telefonico al que te puedan contactar">
-                                <span class="input-group-addon" onmousedown="show_help('telcel')"> ? </span>
-                            </div>
+                    <div class="form-group">
+                        <label class="control-label" for="tel">Telefono Celular</label>
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                            <input type="tel" name="telcel" required="true" class="form-control" id="tel" placeholder="Un numero telefonico al que te puedan contactar">
+                            <span class="input-group-addon" onmousedown="show_help('telcel')"> ? </span>
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label class="control-label" for="tel2">Telefono Fijo</label>
-                            <div class="input-group" >
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                                <input type="tel" name="telfijo"  class="form-control" id="tel2" placeholder="Un numero telefonico alterno al que te puedan contactar">
-                                <span class="input-group-addon" onmousedown="show_help('telfijo')"> ? </span>
-                            </div>
+                    <div class="form-group">
+                        <label class="control-label" for="tel2">Telefono Fijo</label>
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                            <input type="tel" name="telfijo"  class="form-control" id="tel2" placeholder="Un numero telefonico alterno al que te puedan contactar">
+                            <span class="input-group-addon" onmousedown="show_help('telfijo')"> ? </span>
                         </div>
+                    </div>
 
 
-                        <div class="form-group">
-                            <label class="control-label" for="ciudad">Ciudad</label>
-                            <div class="input-group" >
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <select name="city" multiple class="form-control" id="ciudad">
-                                    <option>Manizales</option>
-                                    <option>Medellin</option>
-                                    <option>Bogota</option>
-                                    <option>Cartagena</option>
-                                    <option>Barranquilla</option>
-                                    <option>Santa Marta</option>
-                                    <option>Pereira</option>
+                    <div class="form-group">
+                        <label class="control-label" for="ciudad">Ciudad</label>
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <select name="city" multiple class="form-control" id="ciudad">
+                                <option>Manizales</option>
+                                <option>Medellin</option>
+                                <option>Bogota</option>
+                                <option>Cartagena</option>
+                                <option>Barranquilla</option>
+                                <option>Santa Marta</option>
+                                <option>Pereira</option>
 
-                                </select>
+                            </select>
 
-                            </div>
                         </div>
+                    </div>
 
 
-                        <div class="form-group">
-                            <table class="table">
+                    <div class="form-group">
+                        <table class="table">
                             <tr>
                                 <th>Categorias</th>
                                 <th></th>
@@ -146,42 +148,37 @@
                                     </select>
                                 </td>
                             </tr>
-
                         </table>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label" for="descripcion">Descripcion</label>
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
+                            <textarea type="text" name="descripcion" required="true" class="form-control" id="descripcion" ></textarea>
+
                         </div>
+                    </div>
 
 
-                        <div class="form-group">
-                            <label class="control-label" for="descripcion">Descripcion</label>
-                            <div class="input-group" >
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
-                                <textarea type="text" name="descripcion" required="true" class="form-control" id="descripcion" ></textarea>
+                    <button type="submit"  class="btn btn-primary">
+                        <span class="glyphicon glyphicon-upload" aria-hidden="true">Guardar</span>
+                    </button>
 
-                            </div>
-                        </div>
+                </form>
 
-
-                        <button type="submit"  class="btn btn-primary">
-                            <span class="glyphicon glyphicon-upload" aria-hidden="true"> Publicar</span>
-                        </button>
-
-
-
-                    </form>
-
-
-
-                </div>
+            </div>
 
         </div>
 
 
 
-        </div>
     </div>
+</div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+<!-- Bootstrap core JavaScript
+================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="./HtmlTemplate_files/jquery.min.js"></script>
 <script src="./HtmlTemplate_files/bootstrap.min.js"></script>

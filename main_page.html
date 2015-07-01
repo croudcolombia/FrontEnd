@@ -14,9 +14,10 @@
 
 
     <!-- Bootstrap core CSS -->
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+
+    <!-- Custom styles for this template-->
     <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -30,17 +31,32 @@
     <![endif]-->
 
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
     <script type="text/javascript" src="Javascript/lang_titles_modifiers.js"></script>
     <script type="text/javascript" src="Javascript/nav_side_bar_manager.js"></script>
     <script type="text/javascript" src="Javascript/profile_manager.js"></script>
     <script type="text/javascript" src="Javascript/JobManagers/JobPostingForm.js"></script>
     <script type="text/javascript"  src="Javascript/JobManagers/JobSeeker.js"></script>
+    <script type="text/javascript" src="Javascript/message_manager/messageManager.js"></script>
 
 
 
+    <script src="Javascript/sweet_alert/sweetalert.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="Javascript/sweet_alert/sweetalert.css">
 
-
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#exampleModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var recipient = button.data('emailm');
+            var title =    button.data('titlem');
+            var modal = $(this);
+            modal.find('.modal-body #emailm').val(recipient);
+            modal.find('.modal-body #titlem').val("Me interesa su trabajo "+title);
+        })})
+    </script>
 
   </head>
 
@@ -76,9 +92,9 @@
         <div class="col-sm-3 col-md-2 sidebar">
 
           <ul class="nav nav-sidebar">
-              <li > <a  type="button"  href=""  id="button_11" onclick="return display_news_wells(this);">Ver noticias <span class="glyphicon glyphicon-globe" aria-hidden="true"/>  <span class="badge">4</span>   </a></li>
-            <li > <a  type="button"  href=""  id="button_2" onclick="return create_job_post(this);">Crear Anuncio <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"/>   </a></li>
-            <li> <a href=""  id="button_3" onclick="return nav_bar_section_B(this);">Mis Mensajes <span class="glyphicon glyphicon-envelope" aria-hidden="true"/></a></li>
+            <li> <a type="button"  href=""  id="button_11" onclick="return display_news_wells(this);">Ver noticias <span class="glyphicon glyphicon-globe" aria-hidden="true"/>  <span class="badge">4</span>   </a></li>
+            <li> <a type="button"  href=""  id="button_2" onclick="return create_job_post(this);">Crear Anuncio <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"/>   </a></li>
+            <li> <a href=""  id="button_3" onclick="return get_all_messages();">Mensajes <span class="glyphicon glyphicon-envelope" aria-hidden="true"/></a></li>
             <li> <a href=""  id="button_4" onclick="return nav_bar_section_C(this);">Buscar insumos <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/></a></li>
 
           </ul>
@@ -89,10 +105,10 @@
 
             <a id="show_content_space"></a>
 
-
         </div>
       </div>
     </div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -103,6 +119,58 @@
     <script src="./HtmlTemplate_files/holder.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./HtmlTemplate_files/ie10-viewport-bug-workaround.js"></script>
+
+
+
+
   
 
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs></defs><text x="0" y="10" style="font-weight:bold;font-size:10pt;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">200x200</text></svg></body></html>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Nuevo Mensaje</h4>
+            </div>
+
+            <form onsubmit="send_message(this)">
+            <div class="modal-body">
+
+
+                    <div class="form-group">
+                        <label for="emailm">Para</label>
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input type="email" class="form-control" id="emailm" disabled>
+                        </div>
+                    </div>
+
+                    <label for="titlem">Titulo</label>
+                    <div class="input-group" >
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-screenshot"></i></span>
+                        <input type="text" class="form-control" id="titlem">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje_modal">Mensaje</label>
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
+                            <textarea class="form-control" id="mensaje_modal"></textarea>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Send message</button>
+            </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
