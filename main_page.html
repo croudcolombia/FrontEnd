@@ -37,8 +37,10 @@
     <script type="text/javascript" src="Javascript/nav_side_bar_manager.js"></script>
     <script type="text/javascript" src="Javascript/profile_manager.js"></script>
     <script type="text/javascript" src="Javascript/JobManagers/JobPostingForm.js"></script>
-    <script type="text/javascript"  src="Javascript/JobManagers/JobSeeker.js"></script>
+    <script type="text/javascript" src="Javascript/JobManagers/JobSeeker.js"></script>
     <script type="text/javascript" src="Javascript/message_manager/messageManager.js"></script>
+
+    <script type="text/javascript" src="Javascript/progress_bar/progress_bar.js"></script>
 
 
 
@@ -95,7 +97,7 @@
             <li> <a type="button"  href=""  id="button_11" onclick="return display_news_wells(this);">Ver noticias <span class="glyphicon glyphicon-globe" aria-hidden="true"/>  <span class="badge">4</span>   </a></li>
             <li> <a type="button"  href=""  id="button_2" onclick="return create_job_post(this);">Crear Anuncio <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"/>   </a></li>
             <li> <a href=""  id="button_3" onclick="return get_all_messages();">Mensajes <span class="glyphicon glyphicon-envelope" aria-hidden="true"/></a></li>
-            <li> <a href=""  id="button_4" onclick="return nav_bar_section_C(this);">Buscar insumos <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/></a></li>
+            <li> <a href=""  id="button_4" onclick="return stupid_test_load();">Buscar insumos <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/></a></li>
 
           </ul>
 
@@ -159,7 +161,7 @@
                         <label for="mensaje_modal">Mensaje</label>
                         <div class="input-group" >
                             <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
-                            <textarea class="form-control" id="mensaje_modal"></textarea>
+                            <textarea style="overflow:auto;resize:none" class="form-control" id="mensaje_modal"></textarea>
                         </div>
                     </div>
 
@@ -169,8 +171,25 @@
                 <button type="submit" class="btn btn-primary">Send message</button>
             </div>
             </form>
+        </div>
+    </div>
+</div>
 
 
+
+<div class="modal fade" id="pleaseWaitDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Processing...</h1>
+            </div>
+            <div class="modal-body">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

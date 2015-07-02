@@ -118,17 +118,17 @@ function display_news_form(){
             newsstr+='<div class="form-group">';
             newsstr+='<label for="inputtitulo">Formas de pago</label>';
             newsstr+='<p/>';
-                newsstr+='<table> <tr>';
+                newsstr+='<table> ';
 
                     for(var pay in news[neu].payments){
 
                         if(news[neu].payments[pay]==1) {
-                                newsstr+='<td><span class="glyphicon glyphicon-usd" aria-hidden="true"/> Efectivo</td>';
+                                newsstr+='<tr><td><span class="glyphicon glyphicon-usd" aria-hidden="true"/>Efectivo </td></tr>';
                             }else if(news[neu].payments[pay]==2){
-                                newsstr+='<td><span class="glyphicon glyphicon-credit-card" aria-hidden="true"/> Tarjeta</td>';
+                                newsstr+='<tr><td><span class="glyphicon glyphicon-credit-card" aria-hidden="true"/>Tarjeta </td></tr>';
                         }
                     }
-                newsstr+='</tr></table>';
+                newsstr+='</table>';
             newsstr+='</div>';
 
 

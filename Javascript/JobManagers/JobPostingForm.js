@@ -30,7 +30,7 @@ function create_job_form_string(){
             form+='<label for="textInput">Descripcion</label>';
             form+='<div class="input-group" >';
                 form+='<span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>';
-                form+='<textarea name="text" required="true" type="text" class="form-control" id="textInput" placeholder="Cuentale al mundo el trabjo que quieres ofrecer!!"></textarea>';
+                form+='<textarea style="overflow:auto;resize:none" name="text" required="true" type="text" class="form-control" id="textInput" placeholder="Cuentale al mundo el trabjo que quieres ofrecer!!"></textarea>';
             form+='</div>';
 
         form+='</div>';
@@ -58,9 +58,12 @@ function create_job_form_string(){
 
             form+='</div>';
 
-        form+='<button type="submit"  class="btn btn-primary">';
-            form+='<span class="glyphicon glyphicon-upload" aria-hidden="true"> Publicar</span>';
-            form+='</button>';
+
+            form+='<div align="right">';
+                form+='<button type="submit"  class="btn btn-primary">';
+                    form+='<span class="glyphicon glyphicon-upload" aria-hidden="true"> Publicar</span>';
+                form+='</button>';
+            form+='</div>';
 
     form+='</form></div>';
 
