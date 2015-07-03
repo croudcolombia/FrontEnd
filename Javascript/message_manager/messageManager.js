@@ -40,7 +40,7 @@ function download_all_messages(){
 
 
 function get_all_messages(){
-    var newsstr='';
+    var newsstr='<div class="well"> ';
 
     var news=download_all_messages();
 
@@ -88,7 +88,7 @@ function get_all_messages(){
         newsstr+='</div>';
         newsstr+='</div>';
     }
-
+    newsstr+='</div>';
 
     change_inner_content(newsstr);
 

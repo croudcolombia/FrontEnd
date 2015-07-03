@@ -15,7 +15,7 @@ function start_progress_bar(){
 }
 
 function update_progress_barr(progress){
-    var string='<div class="progress"> <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="'+progress+'" aria-valuemin="0" aria-valuemax="100" style="width: '+progress+'%"> <span class="sr-only">'+progress+'% Complete</span> </div> </div>';
+    var string='<div class="progress"> <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="'+progress+'" aria-valuemin="0" aria-valuemax="100" style="width: '+progress+'%"> <span class="sr-only">'+progress+'% Complete</span> </div> </div>';
     change_inner_content(string);
 }
 
