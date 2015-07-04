@@ -48,17 +48,7 @@
 
     <link rel="stylesheet" type="text/css" href="Javascript/sweet_alert/sweetalert.css">
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#exampleModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget);
-            var recipient = button.data('emailm');
-            var title =    button.data('titlem');
-            var modal = $(this);
-            modal.find('.modal-body #emailm').val(recipient);
-            modal.find('.modal-body #titlem').val("Me interesa su trabajo "+title);
-        })})
-    </script>
+
 
   </head>
 
@@ -73,12 +63,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" onclick="return reload_image_home();">Por la gente, para la gente</a>
+          <a class="navbar-brand" href="main_page.html" >Por la gente, para la gente</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="">Configuracion</a></li>
-            <li><a onclick="return display_profile()">Perfil</a></li>
+            <li><a href="profile_manager.html">Perfil</a></li>
             <li><a href="">Ayuda</a></li>
           </ul>
           <form class="navbar-form navbar-right">
@@ -94,9 +83,9 @@
         <div class="col-sm-3 col-md-2 sidebar">
 
           <ul class="nav nav-sidebar">
-            <li> <a type="button"  href=""  id="button_11" onclick="return display_news_wells(this);">Ver noticias <span class="glyphicon glyphicon-globe" aria-hidden="true"/>  <span class="badge">4</span>   </a></li>
-            <li> <a type="button"  href=""  id="button_2" onclick="return create_job_post(this);">Crear Anuncio <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"/>   </a></li>
-            <li> <a href=""  id="button_3" onclick="return get_all_messages();">Mensajes <span class="glyphicon glyphicon-envelope" aria-hidden="true"/></a></li>
+            <li> <a type="button"  href="jobs.html"   id="button_11" >Ver noticias <span class="glyphicon glyphicon-globe" aria-hidden="true"/>  <span class="badge">4</span>   </a></li>
+              <li> <a type="button"  href="newjob.html"  id="button_2" >Crear Anuncio <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"/>   </a></li>
+              <li> <a href="messages.html"  id="button_3" >Mensajes <span class="glyphicon glyphicon-envelope" aria-hidden="true"/></a></li>
             <li> <a href=""  id="button_4" onclick="return stupid_test_load();">Buscar insumos <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/></a></li>
 
           </ul>
@@ -128,50 +117,3 @@
   
 
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs></defs><text x="0" y="10" style="font-weight:bold;font-size:10pt;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">200x200</text></svg></body></html>
-
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Nuevo Mensaje</h4>
-            </div>
-
-            <form onsubmit="send_message(this)">
-            <div class="modal-body">
-
-
-                    <div class="form-group">
-                        <label for="emailm">Para</label>
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <input type="email" class="form-control" id="emailm" disabled>
-                        </div>
-                    </div>
-
-                    <label for="titlem">Titulo</label>
-                    <div class="input-group" >
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-screenshot"></i></span>
-                        <input type="text" class="form-control" id="titlem">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="mensaje_modal">Mensaje</label>
-                        <div class="input-group" >
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
-                            <textarea style="overflow:auto;resize:none" class="form-control" id="mensaje_modal"></textarea>
-                        </div>
-                    </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Send message</button>
-            </div>
-            </form>
-        </div>
-    </div>
-</div>
-

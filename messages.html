@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/dashboard/ -->
+<html lang="en" xmlns="http://www.w3.org/1999/html"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="This webpage helps empowering local business">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="http://getbootstrap.com/favicon.ico">-->
+
+    <title id="web_title">Por la gente, para la gente</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template-->
+    <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./HtmlTemplate_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="Javascript/lang_titles_modifiers.js"></script>
+    <script type="text/javascript" src="Javascript/nav_side_bar_manager.js"></script>
+
+
+
+    <script type="text/javascript" src="Javascript/message_manager/messageManager.js"></script>
+
+    <script type="text/javascript" src="Javascript/progress_bar/progress_bar.js"></script>
+    <script src="Javascript/sweet_alert/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Javascript/sweet_alert/sweetalert.css">
+
+
+</head>
+
+<body onload="change_title_on_load(document)">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="main_page.html">Por la gente, para la gente</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="profile_manager.html">Perfil</a></li>
+                <li><a href="">Ayuda</a></li>
+
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Busqueda Rapida...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 col-md-2 sidebar">
+
+            <ul class="nav nav-sidebar">
+                <li> <a type="button"  href="jobs.html"  id="button_11" >Ver noticias <span class="glyphicon glyphicon-globe" aria-hidden="true"/>  <span class="badge">4</span>   </a></li>
+                <li> <a type="button"  href="newjob.html"  id="button_2" >Crear Anuncio <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"/>   </a></li>
+                <li> <a href="messages.html"  id="button_3" >Mensajes <span class="glyphicon glyphicon-envelope" aria-hidden="true"/></a></li>
+                <li> <a href=""  id="button_4" onclick="return stupid_test_load();">Buscar insumos <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/></a></li>
+
+            </ul>
+
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+            <a id="show_content_space">
+
+                <div class="panel panel-default">
+
+                <div class="panel-heading">
+
+                    <table>
+                        <tr>
+                            <td><img height="60" width="60" src="http://www.anfocal.ie/wp-content/uploads/2013/02/1A-Main-photo-facebook-blank-face-blank-570x427.jpeg" alt="140x140" class="img-thumbnail"></td>
+
+                            </tr>
+                        </table>
+
+                    </div>
+
+                <div class="panel-body">
+
+
+                    <div class="input-group">
+                        <label >${news_title}</label>
+                        <div align="justify">
+                            <p>${news_message}</p>
+                            </div>
+                        </div>
+
+                    <p id="add_respose1"></p>
+
+                    <form onsubmit="return send_response(this)">
+
+                        <div class="form-group">
+                            <textarea style="overflow:auto;resize:none" type="text" required="true" name="msg_resp" class="form-control" id="descripcion" ></textarea>
+                            </div>
+
+                        <div align="right">
+                            <button type="submit"  class="btn btn-primary">Responder</button>
+                            </div>
+                        <input type="hidden" name="id_change" value="add_respose1" />
+
+                        </form>
+
+                    </div>
+                </div>
+
+
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./HtmlTemplate_files/jquery.min.js"></script>
+<script src="./HtmlTemplate_files/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="./HtmlTemplate_files/holder.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./HtmlTemplate_files/ie10-viewport-bug-workaround.js"></script>
+
+
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs></defs><text x="0" y="10" style="font-weight:bold;font-size:10pt;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">200x200</text></svg></body></html>
+
+
+
+

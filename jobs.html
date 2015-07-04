@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/dashboard/ -->
+<html lang="en" xmlns="http://www.w3.org/1999/html"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="This webpage helps empowering local business">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="http://getbootstrap.com/favicon.ico">-->
+
+    <title id="web_title">Por la gente, para la gente</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template-->
+    <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./HtmlTemplate_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="Javascript/lang_titles_modifiers.js"></script>
+    <script type="text/javascript" src="Javascript/nav_side_bar_manager.js"></script>
+    <script type="text/javascript" src="Javascript/profile_manager.js"></script>
+    <script type="text/javascript" src="Javascript/JobManagers/JobPostingForm.js"></script>
+    <script type="text/javascript" src="Javascript/JobManagers/JobSeeker.js"></script>
+    <script type="text/javascript" src="Javascript/message_manager/messageManager.js"></script>
+
+    <script type="text/javascript" src="Javascript/progress_bar/progress_bar.js"></script>
+
+    <script src="Javascript/sweet_alert/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Javascript/sweet_alert/sweetalert.css">
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#exampleModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget);
+                var recipient = button.data('emailm');
+                var title =    button.data('titlem');
+                var modal = $(this);
+                modal.find('.modal-body #emailm').val(recipient);
+                modal.find('.modal-body #titlem').val("Me interesa su trabajo "+title);
+            })})
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#modalshowtel').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget);
+                var tel = button.data('teljobs');
+                var modal = $(this);
+                modal.find('.modal-body #telefono_show_jobs').val(tel);
+            })})
+    </script>
+
+</head>
+
+<body onload="change_title_on_load(document)">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="main_page.html">Por la gente, para la gente</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="profile_manager.html">Perfil</a></li>
+                <li><a href="">Ayuda</a></li>
+
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Busqueda Rapida...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-3 col-md-2 sidebar">
+
+            <ul class="nav nav-sidebar">
+                <li> <a type="button"  href="jobs.html"  id="button_11" >Ver noticias <span class="glyphicon glyphicon-globe" aria-hidden="true"/>  <span class="badge">4</span>   </a></li>
+                <li> <a type="button"  href="newjob.html"  id="button_2" >Crear Anuncio <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"/>   </a></li>
+                <li> <a href="messages.html"  id="button_3" >Mensajes <span class="glyphicon glyphicon-envelope" aria-hidden="true"/></a></li>
+                <li> <a href=""  id="button_4" onclick="return stupid_test_load();">Buscar insumos <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"/></a></li>
+
+            </ul>
+
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+            <a id="show_content_space">
+
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+
+                <table>
+                    <tr>
+                        <td><img height="60" width="60" src="http://www.anfocal.ie/wp-content/uploads/2013/02/1A-Main-photo-facebook-blank-face-blank-570x427.jpeg" alt="140x140" class="img-thumbnail"></td>
+                        <td><h3 class="panel-title">${title_news}</h3></td>
+                        </tr>
+                    </table>
+                </div>
+
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label> Descripcion </label>
+
+                    <div align="justify">
+                        <p>${description_news}</p>
+                    </div>
+
+                    </div>
+
+                <div class="form-group">
+                    <label >Tags</label>
+                    <p/>
+
+                    <table> <tr>
+
+                        <td>${tags_news}</td>
+                        </tr></table>
+                    </div>
+
+
+                <div class="form-group">
+                    <label >Formas de pago</label>
+                    <p/>
+                    <table> 
+
+                        <tr><td><span class="glyphicon glyphicon-usd" aria-hidden="true"/>Efectivo </td></tr>
+
+                        <tr><td><span class="glyphicon glyphicon-credit-card" aria-hidden="true"/>Tarjeta </td></tr>
+
+                        </table>
+                    </div>
+
+
+                <div class="form-group">
+                    <p/>
+                    <table align="right"> <tr>
+
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalshowtel" data-teljobs="${tel_news}" ><i class="glyphicon glyphicon-earphone"></i></button></td>
+                        <td><button type="button"  class="btn btn-default" ><i class="glyphicon glyphicon-user"></i></button></td>
+                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-titlem="${title_news}" data-emailm="'${email_news}'"><i class="glyphicon glyphicon-envelope"></i></button></td>
+
+                        </tr></table>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./HtmlTemplate_files/jquery.min.js"></script>
+<script src="./HtmlTemplate_files/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="./HtmlTemplate_files/holder.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./HtmlTemplate_files/ie10-viewport-bug-workaround.js"></script>
+
+
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs></defs><text x="0" y="10" style="font-weight:bold;font-size:10pt;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">200x200</text></svg></body></html>
+
+<div class="modal fade" id="modalshowtel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="emailm">Telefono</label>
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input type="email" class="form-control" id="telefono_show_jobs" disabled>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Nuevo Mensaje</h4>
+            </div>
+
+            <form onsubmit="send_message(this)">
+                <div class="modal-body">
+
+
+                    <div class="form-group">
+                        <label for="emailm">Para</label>
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input type="email" class="form-control" id="emailm" disabled>
+                        </div>
+                    </div>
+
+                    <label for="titlem">Titulo</label>
+                    <div class="input-group" >
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-screenshot"></i></span>
+                        <input type="text" class="form-control" id="titlem">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje_modal">Mensaje</label>
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
+                            <textarea style="overflow:auto;resize:none" class="form-control" id="mensaje_modal"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+

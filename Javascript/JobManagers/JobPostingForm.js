@@ -61,9 +61,9 @@ function create_job_form_string(){
 
 
     form+='<div align="right">';
-    form+='<button type="submit"  class="btn btn-primary">';
-    form+='<span class="glyphicon glyphicon-upload" aria-hidden="true"> Publicar</span>';
-    form+='</button>';
+        form+='<button type="submit"  class="btn btn-primary">';
+        form+='<span class="glyphicon glyphicon-upload" aria-hidden="true"> Publicar</span>';
+        form+='</button>';
     form+='</div>';
 
     form+='</form></div>';
